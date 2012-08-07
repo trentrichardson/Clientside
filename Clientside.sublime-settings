@@ -1,0 +1,41 @@
+{
+	// for each operation you can replace, new, console for where to output
+	"css_minify_output": "new",
+	"js_minify_output": "new",
+	"css_format_output": "new",
+	"js_minify_output": "new",
+	"css_lint_output": "new",
+	"js_lint_output": "new",
+
+	// CSS Formatting ==========================
+	// when formatting do you prefer brackets on a new line?
+	"cssformat": {
+		"bracket_newline": false,
+		"compact": false
+	},
+
+	// JS Formatting ==========================
+	// jsbeautify settings, see http://jsbeautifier.org/
+	"jsformat": {		
+		// how to output braces: collapse, expand, end-expand
+		"brace_style": "expand"
+	},
+
+	// Lint options ===========================
+	// how do we call nodejs? node, nodejs, path/to/nodejs, etc..
+	// mac is likely "node" or "/usr/local/bin/node", linux is likely "nodejs"
+	// if you're not sure open a terminal and run "which node" or "which nodejs"
+	"nodejs": "nodejs",
+
+	// css lint settings, see https://github.com/stubbornella/csslint/wiki/Rules
+	"csslint": {
+
+	},
+
+	// js lint settings, see https://github.com/douglascrockford/JSLint
+	"jslint": {
+		"browser": true,
+		"forin": true
+	}
+
+}

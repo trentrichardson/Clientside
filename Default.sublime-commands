@@ -1,0 +1,23 @@
+[
+	{
+		"caption": "Clientside Minify Javascript/CSS",
+		"command": "clientside",
+		"args": {
+			"operation": "minify"
+		}
+	},
+	{
+		"caption": "Clientside Format Javascript/CSS",
+		"command": "clientside",
+		"args": {
+			"operation": "format"
+		}
+	},
+	{
+		"caption": "Clientside Lint Javascript/CSS",
+		"command": "clientside",
+		"args": {
+			"operation": "lint"
+		}
+	}
+]

@@ -1,0 +1,23 @@
+[
+	{
+		"keys": ["super+alt+m"], 
+		"command": "clientside",
+		"args": {
+			"operation": "minify"
+		}
+	},
+	{
+		"keys": ["super+alt+f"], 
+		"command": "clientside",
+		"args": {
+			"operation": "format"
+		}
+	},
+	{
+		"keys": ["super+alt+l"], 
+		"command": "clientside",
+		"args": {
+			"operation": "lint"
+		}
+	}
+]

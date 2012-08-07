@@ -1,0 +1,76 @@
+[
+	{
+		"id": "tools",
+		"children":
+		[
+			{
+				"id": "clientside",
+				"caption": "Clientside",
+				"children": 
+				[
+					{
+						"id": "clientsideminify",
+						"command": "clientside",
+						"caption": "Minify",
+						"args": {
+							"operation": "minify"
+						}
+
+					},
+					{
+						"id": "clientsideformat",
+						"command": "clientside",
+						"caption": "Format",
+						"args": {
+							"operation": "format"
+						}
+					},
+					{
+						"id": "clientsidelint",
+						"command": "clientside",
+						"caption": "Lint",
+						"args": {
+							"operation": "lint"
+						}
+					}
+				]
+			}
+
+		]
+	},
+	{
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"caption": "Clientside",
+						"children":
+						[
+							{
+								"caption": "Clientside Settings – Default",
+								"command": "open_file",
+								"args":
+								{
+									"file": "${packages}/Clientside/Clientside.sublime-settings"
+								}
+							},
+							{
+								"caption": "Clientside Settings – User",
+								"command": "open_file",
+								"args":
+								{
+									"file": "${packages}/User/Clientside.sublime-settings"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
