@@ -14,7 +14,7 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 	def __init__(self, view):
 		self.view = view
 		self.window = sublime.active_window()
-		self.plugin_dir = os.path.split(os.path.abspath(__file__))[0]
+		self.plugin_dir = os.path.join(sublime.packages_path(), 'Clientside') #os.path.split(os.path.abspath(__file__))[0]
 
 	def run(self, edit, operation="minify"):
 		self.settings = sublime.load_settings('Clientside.sublime-settings')
@@ -33,7 +33,7 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 		self.view.set_status('clientside', "Clientside "+file_ext +" "+ operation)
 
 		for sel in selections:
-			selbody = self.view.substr(sel)
+			selbody = self.view.substr(sel).encode('utf-8')
 			if operation == 'minify':
 				if file_ext == 'css':
 					new_str = self.get_css_minified(selbody)
@@ -50,6 +50,8 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 				else:
 					new_str = self.get_js_lint(selbody)
 
+			new_str = new_str.decode('utf-8')
+			
 			if output == "replace":
 				self.view.replace(edit, sel, new_str)
 			elif output == "new":
@@ -162,7 +164,7 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 
 	def get_js_lint(self, codestr):
 		opts = json.dumps(self.settings.get('jslint', {}))
-		
+
 		jslint_path = os.path.join(self.plugin_dir,  "jslint/jslint")
 		tmpfile_path = os.path.join(self.plugin_dir, "jslint/tmp_jslint.js")
 		tmpcode_path = os.path.join(self.plugin_dir, "jslint/tmp_jslint_code.js")
