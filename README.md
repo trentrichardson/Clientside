@@ -1,6 +1,9 @@
 Sublime Text Clientside Plugin
 ==============================
 
+LICENSE
+-------
+
 Sublime Text Clientside Plugin is licensed under the MIT license.
 
 Copyright (c) 2012 Trent Richardson [http://trentrichardson.com]
