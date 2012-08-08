@@ -39,13 +39,13 @@ For Ubuntu use:
 	sudo apt-get install nodejs
 
 For other linux distrobutions this may be a click away in your package manager. 
-The plugin uses nodejs to execute serverside javascript (jslint and jsbeautify)
+The plugin uses nodejs to execute serverside javascript (jslint and csslint)
 
 
 INSTALL
 -------
 
-- Copy or clone the repository from https://github.com/trentrichardson/Clientside into your packages folder
+- Copy or clone the repository from https://github.com/trentrichardson/Clientside into your packages folder ("Packages/Clientside")
 - Go to the Preferences -> Package Settings -> Clientside and set preferences and nodejs path
 
 CONFIGURE
@@ -55,7 +55,13 @@ If you've installed nodejs manually, it is likely accessible through the command
 use "nodejs".  And, on some occasions, you may have to actually point to the binary file location (Mac might be /usr/local/bin/node).  If you need help you 
 can try running in a terminal (unix or linux) the which tool: "which nodejs" or "which node".  This should print out a file path to the binary.
 
-Further help is located in the comments of the preferences configuration files
+Further help is located in the comments of the preferences configuration files. 
+
+Each operation can handle results in the following ways (editable in the configuration): 
+- "new" Places the results in a new unsaved file
+- "replace" Replaces the current selection
+- "clipboard" Copies the results to your clipboard
+- "console" Prints the results to your console. You will need to open your console (Ctl+`)
 
 USE
 ---

@@ -57,6 +57,8 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 			elif output == "new":
 				new_view = self.window.new_file()
 				new_edit = new_view.begin_edit()
+				if operation == "lint":
+					syntax = "Packages/JavaScript/JavaScript.tmLanguage"
 				new_view.set_syntax_file(syntax)
 				new_view.insert(new_edit, 0, new_str)
 				new_view.end_edit(new_edit)
@@ -110,7 +112,7 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 			
 			if(msgs){
 				for(var i=0, len=msgs.length; i<len; i++){
-					out += (msgs[i].line+"          ").substr(0,10) + (msgs[i].col +"          ").substr(0,10) + msgs[i].type +': '+ msgs[i].message.toString().replace('"','\"') +'"\\n';
+					out += (msgs[i].line+"          ").substr(0,10) + (msgs[i].col +"          ").substr(0,10) +'"'+ msgs[i].type +': '+ msgs[i].message.toString().replace('"','\"') +'"\\n';
 				}
 			}
 			
