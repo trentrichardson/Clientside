@@ -95,9 +95,9 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 		else:
 			opts = ',' + opts
 
-		csslint_path = os.path.join(self.plugin_dir, "csslint/csslint")
-		tmpfile_path = os.path.join(self.plugin_dir, "csslint/tmp_csslint.js")
-		tmpcode_path = os.path.join(self.plugin_dir, "csslint/tmp_csslint_code.js")
+		csslint_path = os.path.join(self.plugin_dir, "csslint", "csslint")
+		tmpfile_path = os.path.join(self.plugin_dir, "csslint", "tmp_csslint.js")
+		tmpcode_path = os.path.join(self.plugin_dir, "csslint", "tmp_csslint_code.js")
 		
 		tmpfile = open(tmpfile_path,"w")
 		tmpfile.writelines("var sys = require('sys');")
@@ -167,9 +167,9 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 	def get_js_lint(self, codestr):
 		opts = json.dumps(self.settings.get('jslint', {}))
 
-		jslint_path = os.path.join(self.plugin_dir,  "jslint/jslint")
-		tmpfile_path = os.path.join(self.plugin_dir, "jslint/tmp_jslint.js")
-		tmpcode_path = os.path.join(self.plugin_dir, "jslint/tmp_jslint_code.js")
+		jslint_path = os.path.join(self.plugin_dir,  "jslint", "jslint")
+		tmpfile_path = os.path.join(self.plugin_dir, "jslint", "tmp_jslint.js")
+		tmpcode_path = os.path.join(self.plugin_dir, "jslint", "tmp_jslint_code.js")
 		
 		tmpfile = open(tmpfile_path,"w")
 		tmpfile.writelines("var sys = require('sys');")
