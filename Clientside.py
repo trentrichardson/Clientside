@@ -102,8 +102,8 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 		tmpfile = open(tmpfile_path,"w")
 		tmpfile.writelines("var sys = require('sys');")
 		tmpfile.writelines("var fs = require('fs');")
-		tmpfile.writelines("var CSSLint = require('" + csslint_path + "').CSSLint;")
-		tmpfile.writelines("var body = fs.readFileSync('" + tmpcode_path + "');")
+		tmpfile.writelines("var CSSLint = require('" + csslint_path.replace("\\", "\\\\") + "').CSSLint;")
+		tmpfile.writelines("var body = fs.readFileSync('" + tmpcode_path.replace("\\", "\\\\") + "');")
 		tmpfile.write('''
 			body = body.toString("utf8");
 			var result = CSSLint.verify(body'''+ opts +''');
@@ -174,8 +174,8 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 		tmpfile = open(tmpfile_path,"w")
 		tmpfile.writelines("var sys = require('sys');")
 		tmpfile.writelines("var fs = require('fs');")
-		tmpfile.writelines("var JSLINT = require('" + jslint_path + "').JSLINT;")
-		tmpfile.writelines("var body = fs.readFileSync('" + tmpcode_path + "');")
+		tmpfile.writelines("var JSLINT = require('" + jslint_path.replace("\\", "\\\\") + "').JSLINT;")
+		tmpfile.writelines("var body = fs.readFileSync('" + tmpcode_path.replace("\\", "\\\\") + "');")
 		tmpfile.write('''
 			body = body.toString("utf8");
 			var result = JSLINT(body, '''+ opts +''');
@@ -204,7 +204,7 @@ class ClientsideCommand(sublime_plugin.TextCommand):
 		#clean up
 		os.remove(tmpcode_path)
 		os.remove(tmpfile_path)
-
+		
 		return result
 
 	# SB Helpers ========================================================
