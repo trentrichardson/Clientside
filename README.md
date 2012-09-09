@@ -1,7 +1,7 @@
 Sublime Text Clientside Plugin
 ==============================
 
-ABOUT
+About
 -----
 
 - Author: [Trent Richardson](http://trentrichardson.com)
@@ -17,7 +17,7 @@ javascript and css. Tools for javascript include:
 
 Author: [Trent Richardson](http://trentrichardson.com)
 
-PREREQUISITES
+Prerequisites
 -------------
 NodeJS: <http://nodejs.org/>
 
@@ -29,13 +29,18 @@ For other linux distrobutions this may be a click away in your package manager.
 The plugin uses nodejs to execute serverside javascript (jslint and csslint)
 
 
-INSTALL
+Install
 -------
+The recommended install is via the [Package Control](http://wbond.net/sublime_packages/package_control):
+- Press ctrl+shift+p (Windows, Linux) or cmd+shift+p (OS X), start typing "Package" to access Package Manager commands
+- When the list of packages is presented, search for "Clientside", press enter to install
+- Go to the Preferences -> Package Settings -> Clientside and set preferences and nodejs path
 
+If you need to manually install:
 - Copy or clone the repository from https://github.com/trentrichardson/Clientside into your packages folder ("Packages/Clientside")
 - Go to the Preferences -> Package Settings -> Clientside and set preferences and nodejs path
 
-CONFIGURE
+Configure
 ---------
 Since this plugin uses NodeJS it needs to know how to call it.  Inside the configuration window there is a field for the command to call from a terminal.  
 If you've installed nodejs manually, it is likely accessible through the command using "node".  However, though Ubuntu's package manager you will need to 
@@ -50,12 +55,12 @@ Each operation can handle results in the following ways (editable in the configu
 - "clipboard" Copies the results to your clipboard
 - "console" Prints the results to your console. You will need to open your console (Ctl+`)
 
-USE
+Use
 ---
 
 - With your js or css file the active document go to Tools -> Clientside -> desired tool
 
-LICENSE
+License
 -------
 
 Sublime Text Clientside Plugin is licensed under the MIT license.
