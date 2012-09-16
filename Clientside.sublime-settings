@@ -3,7 +3,7 @@
 	"css_minify_output": "new",
 	"js_minify_output": "new",
 	"css_format_output": "new",
-	"js_minify_output": "new",
+	"js_format_output": "new",
 	"css_lint_output": "new",
 	"js_lint_output": "new",
 
